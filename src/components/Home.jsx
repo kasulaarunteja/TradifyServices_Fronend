@@ -7,6 +7,7 @@ const Home = () => {
       <div>
       <Navbar/>
       </div>
+      <h2>this is home page </h2>
     </div>
   );
 };

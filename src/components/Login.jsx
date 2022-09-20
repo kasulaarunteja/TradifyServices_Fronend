@@ -30,7 +30,7 @@ const Login = () => {
         e.preventDefault();
         setLogin(false);
         axios.post("http://localhost:8080/login", user).then((res) => {
-            console.log(res.data);
+            // console.log(res.data);
             setLogin(true);
             alert("login Successful")
         }).catch((err)=>{

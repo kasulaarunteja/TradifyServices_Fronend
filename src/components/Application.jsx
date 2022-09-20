@@ -1,7 +1,7 @@
 import React from "react";
 import Navbar from "./Navbar";
 
-const Postjob = () => {
+const Application = () => {
   return (
     <div>
       <div>
@@ -9,50 +9,51 @@ const Postjob = () => {
       </div>
       <form className="Auth-form-post">
         <div className="Auth-form-content">
-          <div class="mb-3">
+        <div class="mb-3">
             <label for="role" class="form-label">
-              Role
+              Full Name
             </label>
             <input
               type="text"
               class="form-control"
               id="exampleFormControlInput1"
-              placeholder="Designation"
+              placeholder="eg: Arun"
             />
           </div>
           <div class="mb-3">
             <label for="company" class="form-label">
-              Company Name
+              Email
             </label>
             <input
-              type="text"
+              type="email"
               class="form-control"
               id="exampleFormControlInput1"
-              placeholder="eg: HCL"
+              placeholder="eg: a@gmail.com"
             />
           </div>
           <div class="mb-3">
             <label for="location" class="form-label">
-              Location
+              Experience
             </label>
             <input
               type="text"
               class="form-control"
               id="exampleFormControlInput1"
-              placeholder="eg: Pune"
+              placeholder="eg: 0-10"
             />
           </div>
           <div class="mb-3">
-            <label for="exampleFormControlTextarea1" class="form-label">
-              Company Description
+            <label for="location" class="form-label">
+            Expected CTC
             </label>
-            <textarea
+            <input
+              type="text"
               class="form-control"
-              id="exampleFormControlTextarea1"
-              rows="3"
-              placeholder="About Company"
-            ></textarea>
+              id="exampleFormControlInput1"
+              placeholder="eg: 500000"
+            />
           </div>
+        
           <br />
           <div class="d-grid gap-2 col-6 mx-auto">
             <button class="btn btn-primary" type="button">
@@ -60,9 +61,9 @@ const Postjob = () => {
             </button>
           </div>
         </div>
-      </form>
+        </form>
     </div>
   );
 };
 
-export default Postjob;
+export default Application;
