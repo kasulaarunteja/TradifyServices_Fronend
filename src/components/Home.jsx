@@ -8,7 +8,7 @@ const Home = () => {
   const [data, setData] = useState([]);
 
   const Jobdata = () => {
-    axios.get("http://localhost:8080/postjob").then((res) => {
+    axios.get("https://aruntejatradifys.herokuapp.com/postjob").then((res) => {
       console.log(res.data);
       setData(res.data);
     });

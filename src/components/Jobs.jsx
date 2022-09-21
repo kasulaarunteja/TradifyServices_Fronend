@@ -4,12 +4,14 @@ import Navbar from "./Navbar";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
+
+
 const Jobs = () => {
   const [data, setData] = useState([]);
 
   const Jobdata = () => {
-    axios.get("http://localhost:8080/postjob").then((res) => {
-      console.log(res.data);
+    axios.get("https://aruntejatradifys.herokuapp.com/postjob").then((res) => {
+      // console.log(res.data);
       setData(res.data);
     });
   };
@@ -20,9 +22,10 @@ const Jobs = () => {
 
   const handleDelete = (id) => {
     axios
-      .delete(`http://localhost:8080/deletejob/:${id}`, data)
-      .then((res) => {
+      .delete(`https://aruntejatradifys.herokuapp.com/postjob/${id}`)
+      .then(() => {
         alert(" post Delete  Successful");
+        Jobdata()
       })
       .catch((err) => {
         console.log(err);
@@ -30,7 +33,7 @@ const Jobs = () => {
   };
 
   const handleChangeSort = (key, value = 1) => {
-    if (value == 1) {
+    if (value === 1) {
       data.sort((a, b) => a[key] - b[key]);
       setData([...data]);
     } else {
@@ -69,7 +72,10 @@ const Jobs = () => {
             <>
               <div className="card">
                 <div className="card-header">
-                  <h3>{ele.role}</h3>
+                  <h3 key={data.id}>{ele.role}</h3>
+                  <div>
+                  <button onClick={() => handleDelete(ele._id)}>x</button>
+                  </div>
                 </div>
                 <div className="card-body">
                   <h2 className="card-title">{ele.company_name}</h2>
@@ -78,7 +84,7 @@ const Jobs = () => {
                   <Link href="#" to="/applicate" className="btn btn-primary">
                     Apply
                   </Link>
-                  <button onClick={() => handleDelete(ele._id)}>delete</button>
+                  
                 </div>
               </div>
             </>

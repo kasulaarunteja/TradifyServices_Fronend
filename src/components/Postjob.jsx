@@ -18,21 +18,19 @@ const Postjob = () => {
   };
 
   const handleClick = (e) => {
-    console.log(data)
+    // console.log(data)
     e.preventDefault();
-    console.log(data);
+    // console.log(data);
     axios
-      .post("http://localhost:8080/postjob", data)
+      .post("https://aruntejatradifys.herokuapp.com/postjob", data)
       .then((res) => {
-        console.log(res.data);
+        // console.log(res.data);
         alert("post add Successful");
       })
       .catch((err) => {
         console.log(err);
       });
   };
-
-
 
   return (
     <div>
