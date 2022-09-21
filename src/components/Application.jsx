@@ -10,7 +10,7 @@ const Application = () => {
       <form className="Auth-form-post">
         <div className="Auth-form-content">
         <div class="mb-3">
-            <label for="role" class="form-label">
+            <label for="fullname" class="form-label">
               Full Name
             </label>
             <input
@@ -21,7 +21,7 @@ const Application = () => {
             />
           </div>
           <div class="mb-3">
-            <label for="company" class="form-label">
+            <label for="email" class="form-label">
               Email
             </label>
             <input
@@ -32,7 +32,7 @@ const Application = () => {
             />
           </div>
           <div class="mb-3">
-            <label for="location" class="form-label">
+            <label for="experience" class="form-label">
               Experience
             </label>
             <input
@@ -43,11 +43,22 @@ const Application = () => {
             />
           </div>
           <div class="mb-3">
-            <label for="location" class="form-label">
+            <label for="expectesctc" class="form-label">
             Expected CTC
             </label>
             <input
               type="text"
+              class="form-control"
+              id="exampleFormControlInput1"
+              placeholder="eg: 500000"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="file" class="form-label">
+            Resume File
+            </label>
+            <input
+              type="file"
               class="form-control"
               id="exampleFormControlInput1"
               placeholder="eg: 500000"
